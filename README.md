@@ -1,29 +1,36 @@
 # Academic Portfolio Website
 
-This folder contains a simple one-page academic portfolio website.
+This is a simple GitHub Pages academic portfolio website for civil engineering PhD applications.
 
-## Files
+## Main Files
 
-- `index.html` controls the text and page structure.
-- `styles.css` controls colors, spacing, layout, and mobile responsiveness.
-- `hero-engineering-research.png` is the generic civil engineering research image used in the hero section.
-- `cv-placeholder.txt` is an unused temporary placeholder file. The live website does not present it as a real CV.
+- `index.html` is the English homepage.
+- `ko.html` is the Korean homepage.
+- `styles.css` controls the design, colors, spacing, and mobile layout for both pages.
+- `hero-engineering-research.png` is the shared hero image.
 
-## How to Preview
+## How to Preview Locally
 
-Open `index.html` in a web browser.
+Open `index.html` in a web browser to see the English page.
+
+Open `ko.html` in a web browser to see the Korean page.
+
+If you use a local preview server, the pages will usually be available at:
+
+- `http://127.0.0.1:8765/index.html`
+- `http://127.0.0.1:8765/ko.html`
 
 ## How to Edit
 
-Start with `index.html`.
+Open `index.html` or `ko.html` and look for comments that begin with `Edit`, `이름 수정 위치`, `논문 수정 위치`, `CV 수정 위치`, or `이메일 수정 위치`.
 
-Open `index.html` and look for comments that begin with `Edit`.
-
-The main remaining public placeholders are:
+The remaining public placeholders are:
 
 - `[Public email to be added]`
 - `[Full citation to be added]`
 - `[Full citation to be added after submission or acceptance]`
+- `[공개용 이메일 추가 예정]`
+- `[정확한 논문 서지정보 추가 예정]`
+- `[투고 또는 게재 후 정확한 정보 추가 예정]`
 
-When your real CV is ready, put the CV file in this same folder and add a real
-download link in the CV section of `index.html`.
+Do not add private company documents, internal report details, raw experimental data, phone numbers, home addresses, or unpublished manuscript PDFs to the public website.

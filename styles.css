@@ -26,6 +26,11 @@ body {
   line-height: 1.6;
 }
 
+html:lang(ko) body {
+  font-family: Arial, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  word-break: keep-all;
+}
+
 a {
   color: inherit;
 }
@@ -72,6 +77,11 @@ a {
 .nav-links a:hover,
 .nav-links a:focus-visible {
   color: var(--accent);
+}
+
+.language-link {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .hero {
