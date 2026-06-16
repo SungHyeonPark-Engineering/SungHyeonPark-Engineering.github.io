@@ -132,6 +132,26 @@ h3 {
   font-size: 1.1rem;
 }
 
+.hero-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hero-details span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -203,8 +223,13 @@ h3 {
 
 .content-block p,
 .contact-card p {
-  margin: 0;
+  margin: 0 0 16px;
   color: var(--muted);
+}
+
+.content-block p:last-child,
+.contact-card p:last-child {
+  margin-bottom: 0;
 }
 
 .interest-grid,
@@ -255,6 +280,18 @@ h3 {
   color: var(--muted);
 }
 
+.publication-list,
+.skill-list {
+  margin: 0 0 20px;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.publication-list:last-child,
+.skill-list:last-child {
+  margin-bottom: 0;
+}
+
 .cv-section .content-block {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -278,7 +315,8 @@ h3 {
   margin-top: 22px;
 }
 
-.contact-list a {
+.contact-list a,
+.contact-item {
   display: inline-flex;
   min-height: 40px;
   align-items: center;
@@ -343,7 +381,8 @@ h3 {
   }
 
   .button,
-  .contact-list a {
+  .contact-list a,
+  .contact-item {
     width: 100%;
   }
 }
