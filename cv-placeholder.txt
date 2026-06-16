@@ -1,0 +1,7 @@
+CV placeholder
+
+Replace this file with your real CV when it is ready.
+
+Beginner-friendly tip:
+If your real CV is named "cv.pdf", update the two CV links in index.html from
+"cv-placeholder.txt" to "cv.pdf".
