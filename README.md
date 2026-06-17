@@ -1,36 +1,64 @@
-# Academic Portfolio Website
+# Sung Hyeon Park Academic Portfolio
 
-This is a simple GitHub Pages academic portfolio website for civil engineering PhD applications.
+This is a simple English/Korean GitHub Pages academic portfolio for Civil Engineering Ph.D. applications.
 
-## Main Files
+## Files
 
 - `index.html` is the English homepage.
 - `ko.html` is the Korean homepage.
-- `styles.css` controls the design, colors, spacing, and mobile layout for both pages.
+- `styles.css` controls the shared design for both pages.
 - `hero-engineering-research.png` is the shared hero image.
+- `README.md` is this instruction file.
 
-## How to Preview Locally
+## Local Preview
 
-Open `index.html` in a web browser to see the English page.
+Open these files in a browser:
 
-Open `ko.html` in a web browser to see the Korean page.
+- `index.html` for English
+- `ko.html` for Korean
 
-If you use a local preview server, the pages will usually be available at:
+If using a local preview server, check:
 
-- `http://127.0.0.1:8765/index.html`
-- `http://127.0.0.1:8765/ko.html`
+- `http://127.0.0.1:8766/index.html`
+- `http://127.0.0.1:8766/ko.html`
 
-## How to Edit
+## GitHub Upload
 
-Open `index.html` or `ko.html` and look for comments that begin with `Edit`, `이름 수정 위치`, `논문 수정 위치`, `CV 수정 위치`, or `이메일 수정 위치`.
+Upload only the changed files to the existing repository root:
 
-The remaining public placeholders are:
+- `index.html`
+- `ko.html`
+- `styles.css`
+- `README.md`
+
+Upload `hero-engineering-research.png` only if it is missing from GitHub or has changed.
+
+Do not upload the entire folder. Do not upload the `outputs` folder.
+
+Suggested commit message:
+
+`Update academic portfolio with English and Korean content`
+
+## Editing Notes
+
+Open `index.html` or `ko.html` and look for comments such as:
+
+- `Edit name`
+- `Edit email`
+- `Edit publications`
+- `Edit CV`
+- `Edit projects`
+- `이름 수정 위치`
+- `이메일 수정 위치`
+- `논문 수정 위치`
+- `CV 수정 위치`
+- `프로젝트 수정 위치`
+
+The current contact placeholders are:
 
 - `[Public email to be added]`
-- `[Full citation to be added]`
-- `[Full citation to be added after submission or acceptance]`
 - `[공개용 이메일 추가 예정]`
-- `[정확한 논문 서지정보 추가 예정]`
-- `[투고 또는 게재 후 정확한 정보 추가 예정]`
 
-Do not add private company documents, internal report details, raw experimental data, phone numbers, home addresses, or unpublished manuscript PDFs to the public website.
+Do not add private personal details, confidential company materials, unpublished files, or unsupported academic claims to the public website.
+
+`cv-placeholder.txt` should not be linked as a real CV. A real CV PDF should be added only after final review.
