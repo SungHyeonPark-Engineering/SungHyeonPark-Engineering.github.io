@@ -1,64 +1,94 @@
 # Sung Hyeon Park Academic Portfolio
 
-This is a simple English/Korean GitHub Pages academic portfolio for Civil Engineering Ph.D. applications.
+This repository contains the English and Korean GitHub Pages portfolio of Sung Hyeon Park.
+The site presents research experience in pavement engineering, asphalt materials, field
+performance evaluation, and complementary experimental validation work.
 
-## Files
+## Public Website
 
-- `index.html` is the English homepage.
-- `ko.html` is the Korean homepage.
-- `styles.css` controls the shared design for both pages.
-- `hero-engineering-research.png` is the shared hero image.
-- `README.md` is this instruction file.
+- English: <https://sunghyeonpark-engineering.github.io/>
+- Korean: <https://sunghyeonpark-engineering.github.io/ko.html>
+
+## Repository Files
+
+- `index.html` — English homepage
+- `ko.html` — Korean homepage
+- `styles.css` — shared design for both pages
+- `hero-engineering-research.png` — shared hero illustration
+- `README.md` — project instructions
+
+The site uses plain HTML and CSS. It does not require JavaScript, React, a package
+manager, or a build step.
+
+## Publication Links
+
+Published journal article titles link directly to their DOI records. A forthcoming
+article is intentionally shown without a link, volume, issue, pages, or publication
+date until those details are officially assigned.
+
+## CV and Contact
+
+The current site states that the CV is available upon request. No placeholder CV or
+non-working download button should be added. A downloadable CV should be introduced
+only after the final PDF has been reviewed for public release.
 
 ## Local Preview
 
-Open these files in a browser:
+### Easiest check
 
-- `index.html` for English
-- `ko.html` for Korean
+1. Open the repository folder.
+2. Double-click `index.html` to check the English page.
+3. Double-click `ko.html` to check the Korean page.
+4. Confirm that the image, navigation links, language links, DOI links, and email link work.
 
-If using a local preview server, check:
+### More reliable local server
 
-- `http://127.0.0.1:8766/index.html`
-- `http://127.0.0.1:8766/ko.html`
+Open a terminal in the repository root and run one of these commands:
 
-## GitHub Upload
+```bash
+python -m http.server 8766
+```
 
-Upload only the changed files to the existing repository root:
+On Windows, if `python` is not recognized, try:
+
+```bash
+py -m http.server 8766
+```
+
+Then open:
+
+- <http://127.0.0.1:8766/index.html>
+- <http://127.0.0.1:8766/ko.html>
+
+Press `Ctrl + C` in the terminal to stop the preview server.
+
+## GitHub Update Checklist
+
+Keep the existing repository and GitHub Pages settings. Upload or commit only the
+intended root-level changes:
 
 - `index.html`
 - `ko.html`
 - `styles.css`
 - `README.md`
 
-Upload `hero-engineering-research.png` only if it is missing from GitHub or has changed.
-
-Do not upload the entire folder. Do not upload the `outputs` folder.
+The existing `hero-engineering-research.png` does not need to be uploaded again unless
+the image itself changes. Do not upload an `outputs` folder. If `cv-placeholder.txt`
+still exists in the repository, delete it.
 
 Suggested commit message:
 
-`Update academic portfolio with English and Korean content`
+```text
+Update bilingual academic portfolio and publication links
+```
 
-## Editing Notes
+After GitHub finishes processing the commit:
 
-Open `index.html` or `ko.html` and look for comments such as:
-
-- `Edit name`
-- `Edit email`
-- `Edit publications`
-- `Edit CV`
-- `Edit projects`
-- `이름 수정 위치`
-- `이메일 수정 위치`
-- `논문 수정 위치`
-- `CV 수정 위치`
-- `프로젝트 수정 위치`
-
-The current contact placeholders are:
-
-- `[Public email to be added]`
-- `[공개용 이메일 추가 예정]`
-
-Do not add private personal details, confidential company materials, unpublished files, or unsupported academic claims to the public website.
-
-`cv-placeholder.txt` should not be linked as a real CV. A real CV PDF should be added only after final review.
+1. Open the English and Korean public URLs listed above.
+2. Press `Ctrl + F5` to force the browser to load the latest files.
+3. Check both desktop and mobile-width layouts.
+4. Click each published paper title and confirm that it opens the correct DOI record.
+5. Confirm that the forthcoming paper has no invented DOI or publication details.
+6. Test the English–Korean language links in both directions.
+7. Click the public email address and confirm that the email application opens.
+8. Confirm that no private phone number, internal company material, or unpublished PDF is present.
