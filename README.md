@@ -26,9 +26,8 @@ manager, or a build step.
 
 ## Publication Links
 
-Published journal article titles and DOI identifiers link directly to their DOI records. A forthcoming
-article is intentionally shown without a link, volume, issue, pages, or publication
-date until those details are officially assigned.
+Published journal article titles and DOI identifiers link directly to their DOI records.
+Publication metadata is verified against the official journal record before release.
 
 The 2025 and 2026 Korean Geotechnical Society conference entries link to the publicly
 approved paper and poster PDFs stored in the repository's `assets` directory.
@@ -99,7 +98,8 @@ After GitHub finishes processing the commit:
 2. Press `Ctrl + F5` to force the browser to load the latest files.
 3. Check both desktop and mobile-width layouts.
 4. Click each published paper title and confirm that it opens the correct DOI record.
-5. Confirm that the forthcoming paper has no invented DOI or publication details.
+5. Confirm that the 2026 article shows volume 16, issue 1, pages 1–10, and DOI
+   `10.22702/jkai.2026.16.1.1`.
 6. Test the English–Korean language links in both directions.
 7. Click the public email address and confirm that the email application opens.
 8. Confirm that no private phone number, internal company material, or unpublished PDF is present.
