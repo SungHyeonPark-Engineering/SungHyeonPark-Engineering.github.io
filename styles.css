@@ -29,12 +29,12 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.65;
 }
 
 html:lang(ko) body {
-  font-family: Arial, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  font-family: Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   word-break: keep-all;
 }
 
@@ -505,14 +505,38 @@ h3 {
   border-bottom: 0;
 }
 
-.presentation-list strong,
-.presentation-list span {
+.presentation-title {
   display: block;
-}
-
-.presentation-list strong {
   margin-bottom: 6px;
   color: var(--text);
+}
+
+.presentation-authors,
+.presentation-meta {
+  margin: 0;
+}
+
+.presentation-authors {
+  color: var(--text);
+}
+
+.presentation-meta {
+  margin-top: 5px;
+}
+
+.presentation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.document-button {
+  min-height: 40px;
+  padding: 8px 14px;
+  background: #ffffff;
+  color: var(--accent);
+  font-size: 0.9rem;
 }
 
 .cv-contact-grid {
@@ -628,9 +652,15 @@ h3 {
     padding: 22px;
   }
 
-  .button,
+  .hero-actions .button,
+  .presentation-actions .button,
   .contact-item {
     width: 100%;
+  }
+
+  .presentation-actions {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .publication-item {
