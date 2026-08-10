@@ -15,6 +15,10 @@ performance evaluation, and complementary experimental validation work.
 - `ko.html` — Korean homepage
 - `styles.css` — shared design for both pages
 - `hero-engineering-research.png` — shared hero illustration
+- `assets/2025-kgs-fall-paper.pdf` — 2025 KGS Fall conference paper
+- `assets/2025-kgs-fall-poster.pdf` — 2025 KGS Fall conference poster
+- `assets/2026-kgs-spring-paper.pdf` — 2026 KGS Spring conference paper
+- `assets/2026-kgs-spring-poster.pdf` — 2026 KGS Spring conference poster
 - `README.md` — project instructions
 
 The site uses plain HTML and CSS. It does not require JavaScript, React, a package
@@ -22,9 +26,12 @@ manager, or a build step.
 
 ## Publication Links
 
-Published journal article titles link directly to their DOI records. A forthcoming
+Published journal article titles and DOI identifiers link directly to their DOI records. A forthcoming
 article is intentionally shown without a link, volume, issue, pages, or publication
 date until those details are officially assigned.
+
+The 2025 and 2026 Korean Geotechnical Society conference entries link to the publicly
+approved paper and poster PDFs stored in the repository's `assets` directory.
 
 ## CV and Contact
 
@@ -71,6 +78,10 @@ intended root-level changes:
 - `ko.html`
 - `styles.css`
 - `README.md`
+- `assets/2025-kgs-fall-paper.pdf`
+- `assets/2025-kgs-fall-poster.pdf`
+- `assets/2026-kgs-spring-paper.pdf`
+- `assets/2026-kgs-spring-poster.pdf`
 
 The existing `hero-engineering-research.png` does not need to be uploaded again unless
 the image itself changes. Do not upload an `outputs` folder. If `cv-placeholder.txt`
@@ -92,3 +103,4 @@ After GitHub finishes processing the commit:
 6. Test the English–Korean language links in both directions.
 7. Click the public email address and confirm that the email application opens.
 8. Confirm that no private phone number, internal company material, or unpublished PDF is present.
+9. Open all four conference PDF buttons and confirm that the correct 2025/2026 paper or poster loads.
