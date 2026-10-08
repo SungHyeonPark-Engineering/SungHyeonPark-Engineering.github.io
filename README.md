@@ -21,8 +21,9 @@ performance evaluation, and complementary experimental validation work.
 - `assets/2026-kgs-spring-poster.pdf` — 2026 KGS Spring conference poster
 - `README.md` — project instructions
 
-The site uses plain HTML and CSS. It does not require JavaScript, React, a package
-manager, or a build step.
+The portfolio uses plain HTML and CSS, with optional JavaScript for visit analytics
+and browser privacy preferences. The portfolio remains readable without JavaScript.
+No package manager or build step is required.
 
 ## Publication Links
 
@@ -104,3 +105,46 @@ After GitHub finishes processing the commit:
 7. Click the public email address and confirm that the email application opens.
 8. Confirm that no private phone number, internal company material, or unpublished PDF is present.
 9. Open all four conference PDF buttons and confirm that the correct 2025/2026 paper or poster loads.
+
+## Private visit analytics
+
+Both language pages load `analytics.js`. It loads Umami Cloud only on the live HTTPS
+domain, after a valid Website ID is configured. An empty ID leaves analytics off.
+
+1. Sign in to your own account at https://cloud.umami.is and add the website
+   `sunghyeonpark-engineering.github.io`.
+2. Copy its Website ID into the `websiteId` constant in `analytics.js`.
+   This collection ID is public; never put an API key or password in this repository.
+3. Leave Share URLs disabled and do not grant team access if the statistics must
+   remain owner-only. Visit data lives in Umami, not in this public repository.
+4. Deploy the changed files and visit both homepages from a browser without an
+   exclusion setting. Check the corresponding events in the private Umami dashboard.
+   A successful script load alone does not confirm that events were received.
+5. Use Sessions to inspect anonymous visit times and activity. Check the dashboard's
+   displayed timezone before interpreting timestamps.
+6. Open `privacy.html` and choose "Exclude my visits" in each browser used for
+   maintaining this site. The page is not tracked.
+
+The private dashboard is https://cloud.umami.is. The site's privacy page is public:
+it changes a local browser preference and is not an administrator login.
+
+Collected page URLs omit query strings and fragments, and referrers are reduced to
+their origin. This also removes UTM campaign details. Do Not Track, Global Privacy
+Control, and the browser's opt-out preference suppress collection. If preference
+storage cannot be read, collection is suppressed. Ad blockers and JavaScript being
+disabled can also prevent a visit from appearing.
+
+This does not identify visitors by real name, email, or institution, and anonymous
+sessions are not an exact count of unique people. It cannot restore pre-installation
+visits. PDF requests opened directly and PDF reading time are not tracked.
+
+Files added for this feature: `analytics.js`, `analytics-preferences.js`,
+and `privacy.html`. Include these along with the updated homepages when deploying.
+Removing the two homepage analytics script tags disables collection.
+
+Official references:
+- https://docs.umami.is/docs/collect-data
+- https://docs.umami.is/docs/sessions
+- https://docs.umami.is/docs/enable-share-url
+- https://docs.umami.is/docs/tracker-configuration
+- https://docs.umami.is/docs/exclude-my-own-visits

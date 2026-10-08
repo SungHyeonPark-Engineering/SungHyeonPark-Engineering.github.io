@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy &amp; Analytics | Sung Hyeon Park</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="styles.css?v=612540b">
+  <script defer src="analytics-preferences.js?v=20261008"></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Return to portfolio">
+      <a class="logo" href="./">Sung Hyeon Park</a>
+      <div class="nav-links"><a href="./">English</a><a href="ko.html" lang="ko">한국어</a></div>
+    </nav>
+  </header>
+  <main id="main-content" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Website information</p>
+      <h1 style="font-size:clamp(2rem,5vw,3rem);line-height:1.15">Privacy &amp; Analytics</h1>
+    </div>
+    <section class="content-block wide" aria-labelledby="privacy-en">
+      <h2 id="privacy-en">Visit statistics</h2>
+      <p>When connected, this portfolio uses Umami Cloud to understand visits: time, pages viewed, referring website, approximate location, and browser/device information. The site does not ask the analytics service to collect visitors' names or email addresses, and does not use analytics cookies or session recordings.</p>
+      <p>Statistics are intended for the site owner's private Umami account and are processed by Umami Cloud. They do not identify a particular professor or confirm a visitor's university. Browser privacy signals and the exclusion setting below are respected.</p>
+      <p>URL query parameters and fragments are removed from the visit data. Only the referring website's origin is retained. No visits before activation can be recovered.</p>
+      <p><a href="https://umami.is/privacy">Umami privacy policy</a> · <a href="mailto:poiiopoostar@naver.com">Contact the site owner</a></p>
+    </section>
+    <section class="content-block wide" lang="ko" aria-labelledby="privacy-ko" style="margin-top:24px">
+      <h2 id="privacy-ko">방문 통계 안내</h2>
+      <p>분석 서비스 연결 후 Umami Cloud로 방문 시각, 열람 페이지, 유입 사이트, 대략적인 지역, 브라우저·기기 정보를 집계합니다. 방문자의 이름이나 이메일 수집을 분석 서비스에 요청하지 않으며, 분석용 쿠키나 화면 녹화를 사용하지 않습니다.</p>
+      <p>통계는 홈페이지 소유자의 비공개 Umami 계정에서 확인하며 Umami Cloud가 처리합니다. 특정 교수의 실명이나 소속 대학을 확인하는 기능은 아닙니다. 브라우저의 추적 거부 신호와 아래 제외 설정을 존중합니다.</p>
+      <p>방문 주소의 검색 매개변수와 페이지 내 위치는 제거하고, 유입 주소는 사이트 주소만 남깁니다. 활성화 이전 방문은 복원할 수 없습니다.</p>
+    </section>
+    <section class="content-block wide" aria-labelledby="preferences-heading" style="margin-top:24px">
+      <h2 id="preferences-heading">Your browser / 내 브라우저</h2>
+      <p>Exclude your visits here, including your own site checks. This setting applies to this browser on this device; clearing site data resets it.</p>
+      <p lang="ko">아래에서 방문 집계를 거부하거나 본인의 점검 방문을 제외할 수 있습니다. 현재 기기·브라우저에만 적용되며 사이트 데이터를 지우면 초기화됩니다.</p>
+      <p id="analytics-status" role="status" aria-live="polite">JavaScript is needed to change this setting. / 설정 변경에는 JavaScript가 필요합니다.</p>
+      <div class="hero-actions">
+        <button class="button primary" id="exclude-visits" type="button" disabled>Exclude my visits / 내 방문 제외</button>
+        <button class="button secondary" id="resume-visits" type="button" disabled>Reset exclusion / 제외 해제</button>
+      </div>
+      <p style="margin-top:16px">This privacy page is not tracked. / 이 안내 페이지는 집계하지 않습니다.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; 2026 Sung Hyeon Park.</p></footer>
+</body>
+</html>
