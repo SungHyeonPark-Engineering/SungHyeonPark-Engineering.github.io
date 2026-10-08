@@ -161,8 +161,10 @@ Official references:
 
 
 
-## Research photographs (2026-10-08)
+## Research photographs (2026-10-08, revision 2)
 
-The English and Korean pages include the owner-provided portrait and eight selected research scenes: six photographs and two stills extracted from laboratory videos. Captions describe the visible activity without identifying other people or asserting an unverified material formulation, test standard, project, result, or personal role.
+The bilingual portfolio groups photographs into four research cases: Overlay testing and crack observation, epoxy mixture performance, porous pavement field measurement, and low-temperature binder testing. Each case describes the research question and the owner's verified contribution, distinguishing performed tests from supporting roles.
 
-Only optimized WebP derivatives are published in `assets/photos/`. Original photographs, videos, local paths, review sheets, and selection manifests remain outside this public repository. Published images have no EXIF, GPS, or XMP metadata. Each photograph has responsive image sources, descriptive alternative text, and a full-image link; `photos.js` adds an accessible dialog with Escape/close and focus restoration. The links also work without JavaScript. The existing analytics and privacy implementation is retained.
+The original portrait remains. Nine research images replace the preparation-focused gallery. The Overlay sequence is material C, first test, from Photo 3.14 of the 2023 Godeok Bridge pavement evaluation report. The setup image is illustrative of the test arrangement, not asserted to show that exact specimen. Epoxy images illustrate ITS loading and reported Cantabro test stages; a matched before/after specimen identity is not asserted. Full reports, raw datasets, local paths, and private review documents are not published.
+
+Web images preserve the complete source composition, with responsive WebP encoding and no EXIF, GPS, or XMP metadata. No specimen features or experimental observations are generated or retouched. Alternative text and image links are available without JavaScript; the dialog supports Escape, closing, and focus restoration. The existing portrait, analytics, and privacy implementation are retained. Previous image assets remain available for history but are not used in the new gallery.

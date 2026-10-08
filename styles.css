@@ -728,3 +728,54 @@ body.photo-open { overflow: hidden; }
   .photo-grid { grid-template-columns: 1fr; }
   .photo-dialog { padding: 12px; }
 }
+
+/* Research cases: preserve complete specimen and instrument geometry. */
+.research-cases { display: grid; gap: 32px; }
+.research-case { min-width: 0; padding: 28px; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+.case-heading { display: flex; align-items: baseline; gap: 14px; margin-bottom: 22px; }
+.case-number { flex: none; color: #678397; font-size: .85rem; font-weight: 700; letter-spacing: .08em; }
+.case-heading h3 { font-size: 1.35rem; line-height: 1.35; margin: 0; }
+.case-main { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; gap: 28px; }
+.case-text .case-question { margin: 0 0 18px; color: var(--accent); font-size: 1.05rem; font-weight: 700; }
+.case-text h4 { margin: 0 0 5px; font-size: .78rem; color: var(--muted); letter-spacing: .07em; text-transform: uppercase; }
+.case-text p { margin: 0 0 18px; }
+.case-skills { display: flex; flex-wrap: wrap; gap: 7px; list-style: none; padding: 0; margin: 18px 0 0; }
+.case-skills li { padding: 4px 9px; background: var(--surface-strong); border-radius: 4px; color: var(--accent); font-size: .76rem; }
+.research-case .research-photo { grid-column: auto; border: 0; border-radius: 5px; background: var(--surface); }
+.research-case .photo-link img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; }
+.research-case .research-photo figcaption { padding: 13px 15px; }
+.research-case .research-photo figcaption h3 { font-size: .91rem; margin-bottom: 4px; }
+.research-case .research-photo figcaption p { font-size: .81rem; line-height: 1.5; }
+.case-evidence { margin-top: 26px; }
+.case-evidence > h4 { margin: 0 0 12px; font-size: .96rem; color: var(--accent); }
+.evidence-sequence { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.evidence-sequence.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.case-source { margin: 10px 0 0; font-size: .76rem; color: var(--muted); }
+.case-insight { margin: 18px 0 0; padding: 14px 17px; border-left: 3px solid #507c9c; background: var(--surface); font-size: .92rem; }
+.case-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.case-pair .case-heading { min-height: 56px; align-items: start; }
+.case-pair .research-photo { margin-bottom: 22px; }
+.case-pair .photo-link { height: 340px; display: flex; align-items: center; justify-content: center; }
+.case-pair .photo-link img { height: 100%; object-fit: contain; }
+.research-case .case-paper { display: inline-block; margin-top: 12px; color: var(--accent); font-size: .86rem; font-weight: 700; text-underline-offset: 3px; }
+@media (max-width: 960px) {
+  .research-case { padding: 22px; }
+  .case-main { gap: 22px; }
+  .case-pair { gap: 22px; }
+  .case-pair .photo-link { height: 290px; }
+}
+@media (max-width: 680px) {
+  .research-cases, .case-pair { gap: 22px; }
+  .research-case { padding: 18px; }
+  .case-heading h3 { font-size: 1.15rem; }
+  .case-main, .case-pair { grid-template-columns: 1fr; }
+  .case-main > .case-text { order: -1; }
+  .case-pair .case-heading { min-height: 0; }
+  .evidence-sequence { gap: 8px; }
+  .evidence-sequence .research-photo figcaption { padding: 9px 7px; }
+  .evidence-sequence .research-photo figcaption h3 { font-size: .77rem; }
+  .evidence-sequence .research-photo figcaption p { font-size: .73rem; }
+  .evidence-sequence .photo-expand { width: 24px; height: 24px; right: 5px; bottom: 5px; font-size: 1rem; }
+  .case-pair .photo-link { height: auto; }
+  .case-pair .photo-link img { height: auto; max-height: 440px; }
+}
