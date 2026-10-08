@@ -12,7 +12,8 @@
   <link rel="alternate" hreflang="en" href="https://sunghyeonpark-engineering.github.io/">
   <link rel="alternate" hreflang="ko" href="https://sunghyeonpark-engineering.github.io/ko.html">
   <link rel="alternate" hreflang="x-default" href="https://sunghyeonpark-engineering.github.io/">
-  <link rel="stylesheet" href="styles.css?v=612540b">
+  <link rel="stylesheet" href="styles.css?v=20261008-counter">
+  <script defer src="analytics.js?v=20261008-counter"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -428,8 +429,17 @@
   </main>
 
   <footer class="site-footer">
+    <section class="visitor-stats" aria-labelledby="visits-heading">
+      <h2 id="visits-heading">Site visits</h2>
+      <dl><div><dt>Today</dt><dd id="visits-today">—</dd></div><div><dt>Total visits</dt><dd id="visits-total">—</dd></div></dl>
+      <p class="counter-note">Korea time · Updates may take up to 4 hours · Since installation</p>
+      <p class="counter-date"><time id="visits-date"></time></p>
+      <p id="visits-status" role="status">Loading visit counts.</p>
+      <noscript><p>JavaScript is needed to display visit counts.</p></noscript>
+    </section>
     <p>&copy; 2026 Sung Hyeon Park. All rights reserved.</p>
-    <p><a href="privacy.html">Privacy &amp; analytics</a></p>
+    <p><a href="privacy.html">Privacy &amp; visit counts</a></p>
   </footer>
 </body>
 </html>
+

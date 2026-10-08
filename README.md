@@ -21,8 +21,8 @@ performance evaluation, and complementary experimental validation work.
 - `assets/2026-kgs-spring-poster.pdf` — 2026 KGS Spring conference poster
 - `README.md` — project instructions
 
-The portfolio uses plain HTML and CSS, with optional JavaScript for visit analytics
-and browser privacy preferences. The portfolio remains readable without JavaScript.
+The portfolio uses plain HTML and CSS with optional JavaScript for public visit
+counts and browser privacy preferences. Content remains readable without JavaScript.
 No package manager or build step is required.
 
 ## Publication Links
@@ -106,45 +106,56 @@ After GitHub finishes processing the commit:
 8. Confirm that no private phone number, internal company material, or unpublished PDF is present.
 9. Open all four conference PDF buttons and confirm that the correct 2025/2026 paper or poster loads.
 
-## Private visit analytics
+## Free public visit counter
 
-Both language pages load `analytics.js`. It loads Umami Cloud only on the live HTTPS
-domain, after a valid Website ID is configured. An empty ID leaves analytics off.
+Both homepages load `analytics.js` and display Today / Total visits in the footer.
+Set `counterOrigin` to the owner's GoatCounter HTTPS subdomain. No API token or
+password belongs in this repository.
 
-1. Sign in to your own account at https://cloud.umami.is and add the website
-   `sunghyeonpark-engineering.github.io`.
-2. Copy its Website ID into the `websiteId` constant in `analytics.js`.
-   This collection ID is public; never put an API key or password in this repository.
-3. Leave Share URLs disabled and do not grant team access if the statistics must
-   remain owner-only. Visit data lives in Umami, not in this public repository.
-4. Deploy the changed files and visit both homepages from a browser without an
-   exclusion setting. Check the corresponding events in the private Umami dashboard.
-   A successful script load alone does not confirm that events were received.
-5. Use Sessions to inspect anonymous visit times and activity. Check the dashboard's
-   displayed timezone before interpreting timestamps.
-6. Open `privacy.html` and choose "Exclude my visits" in each browser used for
-   maintaining this site. The page is not tracked.
+Required account settings:
+- Dashboard visibility: **Private**.
+- **Allow adding visitor counts on your website**: enabled.
+- **Data retention in days**: **0** (no automatic deletion).
+- **Sessions**: enabled (keep duplicate filtering).
 
-The private dashboard is https://cloud.umami.is. The site's privacy page is public:
-it changes a local browser preference and is not an administrator login.
+The site records one virtual path per Korean date: `/visits/YYYY-MM-DD`. Both
+language pages use this same path. This avoids counting language changes as new
+page paths and makes the daily counter use Asia/Seoul rather than UTC. We do not
+record the actual page path. Referrers contain only their HTTP(S) origin. Query
+strings, fragments, contact details and custom identifiers are not sent.
 
-Collected page URLs omit query strings and fragments, and referrers are reduced to
-their origin. This also removes UTM campaign details. Do Not Track, Global Privacy
-Control, and the browser's opt-out preference suppress collection. If preference
-storage cannot be read, collection is suppressed. Ad blockers and JavaScript being
-disabled can also prevent a visit from appearing.
+Today reads `/counter/%2Fvisits%2FYYYY-MM-DD.json`; total reads
+`/counter/TOTAL.json`. Use a dedicated GoatCounter site so unrelated page paths
+do not inflate the total. Counters are cached by the service for up to four hours;
+even "no such daily path" can be cached. The first request waits briefly after
+loading the tracker to allow aggregation. The date follows the visitor's device
+clock converted to Korea time. The total is since installation, not historical
+visits before tracking was enabled.
 
-This does not identify visitors by real name, email, or institution, and anonymous
-sessions are not an exact count of unique people. It cannot restore pre-installation
-visits. PDF requests opened directly and PDF reading time are not tracked.
+These are session-based visits, not unique people over all time. Sessions can
+expire after eight hours, and a return on a new Korean date counts again.
+Network changes, shared networks, bots and blockers can affect the result.
+The two counters can have different cache ages. An unavailable count displays
+an em dash; a confirmed missing daily path with an available total displays zero.
 
-Files added for this feature: `analytics.js`, `analytics-preferences.js`,
-and `privacy.html`. Include these along with the updated homepages when deploying.
-Removing the two homepage analytics script tags disables collection.
+Do Not Track, Global Privacy Control, and browser exclusion prevent collecting a
+visit. Public aggregate numbers may still load. The preference page itself is not
+tracked. Use `privacy.html` to exclude your maintenance browser. Each device and
+browser must be configured separately. Clearing site data removes the preference.
+
+Detailed statistics remain in the owner's GoatCounter account. Enabling the public
+counter reveals aggregate path counts, not dashboard access. Keep the dashboard
+private; there is no client-side password or public API credential.
+
+Deployment files: `index.html`, `ko.html`, `styles.css`, `analytics.js`,
+`analytics-preferences.js`, `privacy.html`, and `README.md`. Existing PDF/image
+assets are unchanged. To disable collection, remove the homepage analytics script
+tags (the counters will also stop updating).
 
 Official references:
-- https://docs.umami.is/docs/collect-data
-- https://docs.umami.is/docs/sessions
-- https://docs.umami.is/docs/enable-share-url
-- https://docs.umami.is/docs/tracker-configuration
-- https://docs.umami.is/docs/exclude-my-own-visits
+- https://www.goatcounter.com/
+- https://www.goatcounter.com/help/visitor-counter
+- https://www.goatcounter.com/help/sessions
+- https://www.goatcounter.com/help/js
+- https://github.com/arp242/goatcounter/blob/main/tpl/settings_main.gohtml
+

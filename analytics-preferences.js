@@ -7,7 +7,7 @@
 
   function render() {
     try {
-      const optedOut = Boolean(localStorage.getItem("umami.disabled"));
+      const optedOut = Boolean(localStorage.getItem("portfolio.analytics.disabled") || localStorage.getItem("umami.disabled"));
       const browserOptOut = [navigator.doNotTrack, window.doNotTrack, navigator.msDoNotTrack]
         .some(value => value === 1 || value === "1" || value === "yes") ||
         navigator.globalPrivacyControl === true;
@@ -27,8 +27,11 @@
 
   function save(excluded) {
     try {
-      if (excluded) localStorage.setItem("umami.disabled", "1");
-      else localStorage.removeItem("umami.disabled");
+      if (excluded) localStorage.setItem("portfolio.analytics.disabled", "1");
+      else {
+        localStorage.removeItem("portfolio.analytics.disabled");
+        localStorage.removeItem("umami.disabled");
+      }
       render();
     } catch {
       status.textContent = "Could not save this preference. / 설정을 저장하지 못했습니다.";
@@ -40,3 +43,4 @@
   window.addEventListener("storage", render);
   render();
 })();
+

@@ -673,3 +673,16 @@ h3 {
     scroll-behavior: auto;
   }
 }
+
+/* Public aggregate counts; detailed analytics remain in the owner's account. */
+.visitor-stats { max-width: 580px; margin: 0 auto 22px; padding: 21px 24px; border: 1px solid var(--border); border-radius: 9px; background: var(--surface); }
+.visitor-stats h2 { font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.visitor-stats dl { display: grid; grid-template-columns: 1fr 1fr; margin: 18px 0 12px; }
+.visitor-stats dl > div + div { border-left: 1px solid var(--border); }
+.visitor-stats dt { font-size: .86rem; }
+.visitor-stats dd { margin: 3px 0 0; color: var(--accent); font-size: 2rem; font-weight: 750; font-variant-numeric: tabular-nums; }
+.visitor-stats .counter-note { font-size: .76rem; }
+.visitor-stats .counter-date { margin-top: 7px; font-size: .76rem; }
+.visitor-stats #visits-status { font-size: .8rem; color: var(--muted); }
+.visitor-stats #visits-status:empty { display: none; }
+
