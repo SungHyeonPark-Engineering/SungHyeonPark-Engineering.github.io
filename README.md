@@ -159,3 +159,10 @@ Official references:
 - https://www.goatcounter.com/help/js
 - https://github.com/arp242/goatcounter/blob/main/tpl/settings_main.gohtml
 
+
+
+## Research photographs (2026-10-08)
+
+The English and Korean pages include the owner-provided portrait and eight selected research scenes: six photographs and two stills extracted from laboratory videos. Captions describe the visible activity without identifying other people or asserting an unverified material formulation, test standard, project, result, or personal role.
+
+Only optimized WebP derivatives are published in `assets/photos/`. Original photographs, videos, local paths, review sheets, and selection manifests remain outside this public repository. Published images have no EXIF, GPS, or XMP metadata. Each photograph has responsive image sources, descriptive alternative text, and a full-image link; `photos.js` adds an accessible dialog with Escape/close and focus restoration. The links also work without JavaScript. The existing analytics and privacy implementation is retained.

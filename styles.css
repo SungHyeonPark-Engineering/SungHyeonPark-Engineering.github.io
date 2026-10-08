@@ -686,3 +686,45 @@ h3 {
 .visitor-stats #visits-status { font-size: .8rem; color: var(--muted); }
 .visitor-stats #visits-status:empty { display: none; }
 
+
+
+/* Real portrait and a curated record of laboratory and field work. */
+.hero { grid-template-columns: minmax(0, 1fr) 300px; gap: 72px; }
+.portrait { width: 300px; justify-self: end; background: #fff; }
+.portrait img { aspect-ratio: 3 / 4; object-fit: contain; }
+.portrait figcaption { padding: 17px 20px; border-top: 1px solid var(--border); }
+.portrait figcaption strong { display: block; color: var(--accent); font-size: 1rem; }
+.portrait figcaption span { display: block; color: var(--muted); font-size: .8rem; }
+.photo-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; }
+.research-photo { grid-column: span 2; margin: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 9px; background: #fff; }
+.research-photo:nth-child(-n+2) { grid-column: span 3; }
+.photo-link { display: block; position: relative; background: var(--surface-strong); }
+.photo-link:focus-visible { outline-offset: -4px; }
+.photo-link img { display: block; width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: cover; }
+.photo-expand { position: absolute; right: 12px; bottom: 12px; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; color: #fff; background: rgba(10, 30, 48, .8); font-size: 1.2rem; }
+.photo-link:hover .photo-expand { background: var(--accent); }
+.research-photo figcaption { padding: 20px; }
+.research-photo h3 { margin-bottom: 7px; }
+.research-photo p { margin: 0; font-size: .92rem; color: var(--muted); }
+.photo-dialog { width: min(1100px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 16px; border: 1px solid var(--border); border-radius: 10px; background: #fff; color: var(--text); }
+.photo-dialog::backdrop { background: rgba(9, 19, 30, .85); }
+.photo-dialog figure { margin: 0; }
+.photo-dialog img { display: block; width: 100%; height: auto; max-height: calc(100dvh - 210px); object-fit: contain; background: var(--surface); }
+.photo-dialog figcaption { padding: 16px 4px 4px; }
+.photo-dialog figcaption h3 { margin: 0 0 6px; }
+.photo-dialog figcaption p { margin: 0; color: var(--muted); }
+.photo-dialog-close { display: block; margin: 0 0 12px auto; min-width: 44px; min-height: 44px; padding: 8px 16px; border: 1px solid var(--border); border-radius: 6px; background: #fff; color: var(--accent); font: inherit; font-weight: 700; cursor: pointer; }
+.photo-dialog-close:focus-visible { outline: 3px solid #2f78ae; outline-offset: 3px; }
+body.photo-open { overflow: hidden; }
+@media (max-width: 960px) {
+  .hero { grid-template-columns: minmax(0, 1fr) 240px; gap: 36px; }
+  .portrait { width: 240px; }
+  .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .research-photo, .research-photo:nth-child(-n+2) { grid-column: auto; }
+}
+@media (max-width: 680px) {
+  .hero { grid-template-columns: 1fr; }
+  .portrait { width: 200px; justify-self: center; order: -1; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-dialog { padding: 12px; }
+}
