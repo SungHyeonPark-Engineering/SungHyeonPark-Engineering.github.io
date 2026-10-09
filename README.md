@@ -70,7 +70,7 @@ After deployment, verify the Pages build and the actual published pages and asse
 
 ## Free public visit counter
 
-Both homepages and all research detail pages load `analytics.js` and display Today / Total visits in the footer.
+Both homepages and all research detail pages load `analytics.js`. The homepages display Today / Total visits in the footer.
 Set `counterOrigin` to the owner's GoatCounter HTTPS subdomain. No API token or
 password belongs in this repository.
 
