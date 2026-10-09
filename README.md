@@ -1,114 +1,76 @@
 # Sung Hyeon Park Academic Portfolio
 
-This repository contains the English and Korean GitHub Pages portfolio of Sung Hyeon Park.
-The site presents research experience in pavement engineering, asphalt materials, field
-performance evaluation, and complementary experimental validation work.
+Bilingual research portfolio hosted at https://sunghyeonpark-engineering.github.io/.
+English home: `index.html`; Korean home: `ko.html`.
 
-## Public Website
+## Site structure
 
-- English: <https://sunghyeonpark-engineering.github.io/>
-- Korean: <https://sunghyeonpark-engineering.github.io/ko.html>
+The home page has six sections: introduction, selected research, capabilities,
+outputs, background, and contact. Pavement research appears in this order:
 
-## Repository Files
+1. Low-temperature binder performance
+2. Porous pavement field performance
+3. Epoxy asphalt mixture performance
+4. Mastic asphalt and Overlay testing
+5. Anti-icing mixture standardization
+6. Binder production and stiffness (published in 2026, after graduation)
 
-- `index.html` — English homepage
-- `ko.html` — Korean homepage
-- `styles.css` — shared design for both pages
-- `hero-engineering-research.png` — shared hero illustration
-- `assets/2025-kgs-fall-paper.pdf` — 2025 KGS Fall conference paper
-- `assets/2025-kgs-fall-poster.pdf` — 2025 KGS Fall conference poster
-- `assets/2026-kgs-spring-paper.pdf` — 2026 KGS Spring conference paper
-- `assets/2026-kgs-spring-poster.pdf` — 2026 KGS Spring conference poster
-- `README.md` — project instructions
+The four leading topics link to detailed project pages. Complementary ground-anchor
+experience has a separate page linked from the conference outputs. Each detail page
+has an English file and a matching `-ko.html` file:
 
-The portfolio uses plain HTML and CSS with optional JavaScript for public visit
-counts and browser privacy preferences. Content remains readable without JavaScript.
-No package manager or build step is required.
+- `low-temperature-binder.html`
+- `porous-asphalt-field.html`
+- `epoxy-asphalt.html`
+- `mastic-asphalt-overlay.html`
+- `ground-anchor-validation.html`
 
-## Publication Links
+The site uses static HTML and CSS. No build step or package manager is needed.
+`photos.js` provides optional accessible image enlargement; image links still work
+without JavaScript. `styles.css` also supports the existing `privacy.html` page.
+`sitemap.xml`, `robots.txt`, canonical and language links support discovery.
+`assets/portfolio-share.png` and `assets/favicon.svg` provide sharing and tab graphics.
 
-Published journal article titles and DOI identifiers link directly to their DOI records.
-Publication metadata is verified against the official journal record before release.
+## Research and publication content
 
-The 2025 and 2026 Korean Geotechnical Society conference entries link to the publicly
-approved paper and poster PDFs stored in the repository's `assets` directory.
+Descriptions distinguish direct testing from support, personal participation from
+project periods, and published/presented work from planned outputs. Standardization
+reached final review; formal adoption remains incomplete. The October 2026 KSCE
+conference entry is explicitly planned and must not be relabeled as completed
+without confirmation.
 
-## CV and Contact
+Journal titles, author order, corresponding-author marks, and DOI links retain the
+official records. The four public KGS paper/poster PDFs retain their original page
+contents; document titles and authors are recorded in PDF metadata. Each conference
+has its own record and full-poster thumbnail. Thumbnail links open the PDF.
 
-The current site states that the CV is available upon request. No placeholder CV or
-non-working download button should be added. A downloadable CV should be introduced
-only after the final PDF has been reviewed for public release.
+The CV is available upon request. Keep public contact links working and never add
+private source documents, unreviewed CV files, credentials, or internal work records.
 
-## Local Preview
+## Research images
 
-### Easiest check
+The portrait and nine research photographs preserve the full source composition.
+WebP copies omit image metadata. Research observations are not generated or retouched.
+The Overlay sequence is material C, first test, from Photo 3.14 of the 2023 Godeok
+Bridge pavement evaluation report. The setup photograph is not asserted to show that
+same specimen. Cantabro photographs are representative specimens from separate
+photographic records. These distinctions remain in the detail pages and captions.
+Full reports, raw videos, and private review material are not website assets.
 
-1. Open the repository folder.
-2. Double-click `index.html` to check the English page.
-3. Double-click `ko.html` to check the Korean page.
-4. Confirm that the image, navigation links, language links, DOI links, and email link work.
+## Preview and verification
 
-### More reliable local server
+Run `python -m http.server 8766` in the repository and open
+http://127.0.0.1:8766/. Verify both homepages and all ten detail pages, language-pair
+navigation, photo enlargement and keyboard closing, DOI/PDF links, and narrow screens.
+Analytics collection is restricted to the production HTTPS hostname. On production,
+use the privacy page to exclude the maintenance browser before testing.
 
-Open a terminal in the repository root and run one of these commands:
-
-```bash
-python -m http.server 8766
-```
-
-On Windows, if `python` is not recognized, try:
-
-```bash
-py -m http.server 8766
-```
-
-Then open:
-
-- <http://127.0.0.1:8766/index.html>
-- <http://127.0.0.1:8766/ko.html>
-
-Press `Ctrl + C` in the terminal to stop the preview server.
-
-## GitHub Update Checklist
-
-Keep the existing repository and GitHub Pages settings. Upload or commit only the
-intended root-level changes:
-
-- `index.html`
-- `ko.html`
-- `styles.css`
-- `README.md`
-- `assets/2025-kgs-fall-paper.pdf`
-- `assets/2025-kgs-fall-poster.pdf`
-- `assets/2026-kgs-spring-paper.pdf`
-- `assets/2026-kgs-spring-poster.pdf`
-
-The existing `hero-engineering-research.png` does not need to be uploaded again unless
-the image itself changes. Do not upload an `outputs` folder. If `cv-placeholder.txt`
-still exists in the repository, delete it.
-
-Suggested commit message:
-
-```text
-Update bilingual academic portfolio and publication links
-```
-
-After GitHub finishes processing the commit:
-
-1. Open the English and Korean public URLs listed above.
-2. Press `Ctrl + F5` to force the browser to load the latest files.
-3. Check both desktop and mobile-width layouts.
-4. Click each published paper title and confirm that it opens the correct DOI record.
-5. Confirm that the 2026 article shows volume 16, issue 1, pages 1–10, and DOI
-   `10.22702/jkai.2026.16.1.1`.
-6. Test the English–Korean language links in both directions.
-7. Click the public email address and confirm that the email application opens.
-8. Confirm that no private phone number, internal company material, or unpublished PDF is present.
-9. Open all four conference PDF buttons and confirm that the correct 2025/2026 paper or poster loads.
+Deploy only the intended site files. Preserve existing unrelated assets and settings.
+After deployment, verify the Pages build and the actual published pages and assets.
 
 ## Free public visit counter
 
-Both homepages load `analytics.js` and display Today / Total visits in the footer.
+Both homepages and all research detail pages load `analytics.js` and display Today / Total visits in the footer.
 Set `counterOrigin` to the owner's GoatCounter HTTPS subdomain. No API token or
 password belongs in this repository.
 
@@ -118,8 +80,8 @@ Required account settings:
 - **Data retention in days**: **0** (no automatic deletion).
 - **Sessions**: enabled (keep duplicate filtering).
 
-The site records one virtual path per Korean date: `/visits/YYYY-MM-DD`. Both
-language pages use this same path. This avoids counting language changes as new
+The site records one virtual path per Korean date: `/visits/YYYY-MM-DD`. All
+language and research pages use this same path. This avoids counting language changes as new
 page paths and makes the daily counter use Asia/Seoul rather than UTC. We do not
 record the actual page path. Referrers contain only their HTTP(S) origin. Query
 strings, fragments, contact details and custom identifiers are not sent.
@@ -147,11 +109,6 @@ Detailed statistics remain in the owner's GoatCounter account. Enabling the publ
 counter reveals aggregate path counts, not dashboard access. Keep the dashboard
 private; there is no client-side password or public API credential.
 
-Deployment files: `index.html`, `ko.html`, `styles.css`, `analytics.js`,
-`analytics-preferences.js`, `privacy.html`, and `README.md`. Existing PDF/image
-assets are unchanged. To disable collection, remove the homepage analytics script
-tags (the counters will also stop updating).
-
 Official references:
 - https://www.goatcounter.com/
 - https://www.goatcounter.com/help/visitor-counter
@@ -161,10 +118,3 @@ Official references:
 
 
 
-## Research photographs (2026-10-08, revision 2)
-
-The bilingual portfolio groups photographs into four research cases: Overlay testing and crack observation, epoxy mixture performance, porous pavement field measurement, and low-temperature binder testing. Each case describes the research question and the owner's verified contribution, distinguishing performed tests from supporting roles.
-
-The original portrait remains. Nine research images replace the preparation-focused gallery. The Overlay sequence is material C, first test, from Photo 3.14 of the 2023 Godeok Bridge pavement evaluation report. The setup image is illustrative of the test arrangement, not asserted to show that exact specimen. Epoxy images illustrate ITS loading and reported Cantabro test stages; a matched before/after specimen identity is not asserted. Full reports, raw datasets, local paths, and private review documents are not published.
-
-Web images preserve the complete source composition, with responsive WebP encoding and no EXIF, GPS, or XMP metadata. No specimen features or experimental observations are generated or retouched. Alternative text and image links are available without JavaScript; the dialog supports Escape, closing, and focus restoration. The existing portrait, analytics, and privacy implementation are retained. Previous image assets remain available for history but are not used in the new gallery.
