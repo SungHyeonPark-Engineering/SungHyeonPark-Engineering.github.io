@@ -920,3 +920,57 @@ body.photo-open { overflow: hidden; }
  .detail-page .process-photo-grid .photo-link img { height:auto; max-height:360px; }
  .detail-page .process-photo-grid .photo-link { min-height:180px; }
 }
+
+
+/* Restrained portfolio readability, 2026-10-10. Gallery layout is unchanged. */
+body.portfolio-readable { font-size:18px; line-height:1.7; }
+.portfolio-readable .detail-main:not(.gallery-main) { max-width:1080px; }
+.portfolio-readable .detail-main:not(.gallery-main) .detail-overview { grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:36px; }
+.portfolio-readable .detail-main:not(.gallery-main) .detail-method > p,
+.portfolio-readable .detail-main:not(.gallery-main) .detail-outcome > p { max-width:70ch; }
+.portfolio-readable .detail-main:not(.gallery-main) h2 { font-size:1.4rem; line-height:1.4; }
+.portfolio-readable .detail-main:not(.gallery-main) .research-photo h3 { font-size:17px; line-height:1.45; }
+.portfolio-readable .detail-main:not(.gallery-main) .research-photo p { font-size:16px; line-height:1.65; }
+.portfolio-readable .detail-main:not(.gallery-main) .photo-link img { max-height:390px; }
+.portfolio-readable .curated-evidence > .research-photo { max-width:700px; margin:0; }
+.portfolio-readable .curated-evidence .photo-link img { max-height:420px; }
+.portfolio-readable .research-card-body > p:not(.card-meta),
+.portfolio-readable .research-note > p:not(.card-meta),
+.portfolio-readable .capability-grid p,
+.portfolio-readable .background-list p,
+.portfolio-readable .hero-bio { font-size:1em; line-height:1.7; }
+.portfolio-readable .card-meta,
+.portfolio-readable .output-label,
+.portfolio-readable .output-paper .authors,
+.portfolio-readable .output-paper .publication-meta,
+.portfolio-readable .publication-key,
+.portfolio-readable .conference-card .meta-line,
+.portfolio-readable .conference-role,
+.portfolio-readable .document-links,
+.portfolio-readable .planned-output,
+.portfolio-readable .case-source,
+.portfolio-readable .visual-note,
+.portfolio-readable .detail-heading .eyebrow,
+.portfolio-readable .case-link,
+.portfolio-readable .related-research { font-size:16px; line-height:1.6; }
+.portfolio-readable .conference-card h4 { font-size:17px; }
+.portfolio-readable .conference-card { grid-template-columns:94px minmax(0,1fr); }
+.portfolio-readable .nav-links { font-size:16px; }
+.portfolio-readable .method-flow li { font-size:17px; }
+.portfolio-readable .method-flow span { font-size:15px; }
+.portfolio-readable .analysis-reading p { max-width:65ch; }
+@media(max-width:680px) {
+ body.portfolio-readable { font-size:17px; }
+ .portfolio-readable .detail-main:not(.gallery-main) .detail-overview { grid-template-columns:1fr; gap:22px; }
+ .portfolio-readable .detail-main:not(.gallery-main) .evidence-sequence { grid-template-columns:1fr; gap:20px; }
+ .portfolio-readable .detail-main:not(.gallery-main) .photo-link img { max-height:360px; }
+ .portfolio-readable .detail-main:not(.gallery-main) .research-photo figcaption { padding:16px; }
+ .portfolio-readable .detail-main:not(.gallery-main) .research-photo h3 { font-size:17px; }
+ .portfolio-readable .detail-main:not(.gallery-main) .research-photo p { font-size:16px; }
+ .portfolio-readable .nav { gap:12px; }
+ .portfolio-readable .nav-links { gap:6px 12px; }
+ .portfolio-readable .conference-card { grid-template-columns:62px minmax(0,1fr); }
+ .portfolio-readable .portfolio-hero .hero-actions .button,
+ .portfolio-readable .hero-contact { font-size:16px; }
+}
+.portfolio-readable .profile-portrait figcaption { font-size:16px; line-height:1.5; }
