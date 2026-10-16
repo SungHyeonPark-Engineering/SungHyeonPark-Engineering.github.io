@@ -25,7 +25,8 @@
       .some(value => value === 1 || value === "1" || value === "yes") ||
       navigator.globalPrivacyControl === true) return true;
     try {
-      return Boolean(localStorage.getItem("portfolio.analytics.disabled") || localStorage.getItem("umami.disabled"));
+      return Boolean(localStorage.getItem("portfolio.analytics.disabled") || localStorage.getItem("umami.disabled") ||
+        localStorage.getItem("skipgc") === "t");
     } catch { return true; }
   }
 
@@ -88,6 +89,9 @@
     return;
   }
   window.goatcounter = {
+    // Build a URL with the official client, but sanitize it before sending.
+    // count.js also adds location.search as `q`, independently of `path`.
+    no_onload: true,
     no_events: true,
     // A shared date path makes language changes/reloads use the same deduplication key.
     // The path's date defines "today" in Korea without relying on UTC query filters.
@@ -96,12 +100,40 @@
     referrer: referrerOrigin,
     no_session: false
   };
+  let sent = false;
+  function countOnce() {
+    if (sent || document.visibilityState !== "visible" || excluded()) return;
+    const counter = window.goatcounter;
+    if (typeof counter.filter !== "function" || typeof counter.url !== "function" || counter.filter()) return;
+    const raw = counter.url();
+    if (!raw) return;
+    const request = new URL(raw);
+    if (request.origin !== counterOrigin || request.pathname !== "/count") return;
+    // Allow only the intended fields; do not forward query strings or future
+    // client fields automatically. Keep the client's bot flag unchanged.
+    const allowed = new Set(["p", "r", "t", "s", "b", "rnd"]);
+    for (const key of [...request.searchParams.keys()]) {
+      if (!allowed.has(key)) request.searchParams.delete(key);
+    }
+    sent = true;
+    // Do not send account cookies or an HTTP Referer. Avoid automatic retries:
+    // a rejected response does not prove that the server missed the first hit.
+    fetch(request.href, {
+      method: "POST", mode: "no-cors", credentials: "omit",
+      referrerPolicy: "no-referrer", keepalive: true
+    }).catch(() => {});
+  }
   const script = document.createElement("script");
   script.id = "portfolio-analytics";
   script.async = true;
   script.src = "https://gc.zgo.at/count.js";
+  script.referrerPolicy = "no-referrer";
   script.setAttribute("data-goatcounter", counterOrigin + "/count");
-  script.onload = () => setTimeout(showCountsOnce, 12000);
+  script.onload = () => {
+    countOnce();
+    document.addEventListener("visibilitychange", countOnce);
+    setTimeout(showCountsOnce, 12000);
+  };
   script.onerror = showCountsOnce;
   setTimeout(showCountsOnce, 15000);
   document.head.appendChild(script);

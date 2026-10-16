@@ -7,7 +7,8 @@
 
   function render() {
     try {
-      const optedOut = Boolean(localStorage.getItem("portfolio.analytics.disabled") || localStorage.getItem("umami.disabled"));
+      const optedOut = Boolean(localStorage.getItem("portfolio.analytics.disabled") || localStorage.getItem("umami.disabled") ||
+        localStorage.getItem("skipgc") === "t");
       const browserOptOut = [navigator.doNotTrack, window.doNotTrack, navigator.msDoNotTrack]
         .some(value => value === 1 || value === "1" || value === "yes") ||
         navigator.globalPrivacyControl === true;
@@ -31,6 +32,7 @@
       else {
         localStorage.removeItem("portfolio.analytics.disabled");
         localStorage.removeItem("umami.disabled");
+        localStorage.removeItem("skipgc");
       }
       render();
     } catch {

@@ -116,5 +116,32 @@ Official references:
 - https://www.goatcounter.com/help/js
 - https://github.com/arp242/goatcounter/blob/main/tpl/settings_main.gohtml
 
+### Analytics maintenance (2026-10-16)
+
+GoatCounter remains the only analytics provider. An Umami setup reminder does
+not indicate that GoatCounter has stopped collecting. Do not add a second
+tracker merely to silence that reminder.
+
+The official GoatCounter client includes `location.search` in a separate `q`
+field even when `path` is overridden. Therefore `analytics.js` disables its
+automatic send (`no_onload`), uses its documented `filter()` and `url()` helpers,
+and sends only an allowlist of fields. The request omits cookies and the HTTP
+Referer, preserves bot detection, and waits for a visible page. It never retries
+a possibly accepted hit. The official client's `skipgc` preference is also
+recognized by the privacy page, alongside the existing exclusion preferences.
+
+Regression checks: `node --test tests/analytics.test.cjs`. To check against a
+fresh official client without sending test visits, download
+`https://gc.zgo.at/count.js` to a temporary file, then run
+`GOATCOUNTER_CLIENT=/path/to/count.js node --test tests/analytics.test.cjs`.
+These are isolated tests with mocked network requests. They do not prove
+server ingestion or the private account's Sessions/retention settings.
+
+Public checks on 2026-10-16 confirmed the total endpoint returned HTTP 200 and
+13 visits, and the detailed dashboard required sign-in. A daily endpoint can
+return a cached 404 before any visits for that date have been aggregated; this
+is not by itself evidence that tracking is broken. Use the private dashboard
+for near-term ingestion checks; public counters may lag by four hours.
+
 
 
