@@ -1,0 +1,39 @@
+/* Selected field photographs: preserve the complete frame and reading order. */
+.research-card[data-project="porous-asphalt"] .research-card-image img {
+  object-fit: contain;
+}
+.portfolio-readable.field-monitoring .detail-main .field-lead-photo {
+  width: min(100%, 820px);
+  margin: 0 auto;
+}
+.portfolio-readable.field-monitoring .detail-main .field-lead-photo .photo-link img {
+  max-height: none;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.field-secondary-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 820px;
+  margin: 28px auto 0;
+  align-items: start;
+}
+.field-secondary-photos .research-photo { margin: 0; }
+.portfolio-readable.field-monitoring .detail-main .field-secondary-photos .photo-link img {
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.field-research-context {
+  margin-top: 38px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border);
+}
+.field-research-context p { max-width: 70ch; }
+.field-research-context li { margin-bottom: 10px; }
+@media (max-width: 680px) {
+  .field-secondary-photos { grid-template-columns: 1fr; gap: 24px; }
+}
