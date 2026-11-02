@@ -974,3 +974,5 @@ body.portfolio-readable { font-size:18px; line-height:1.7; }
  .portfolio-readable .hero-contact { font-size:16px; }
 }
 .portfolio-readable .profile-portrait figcaption { font-size:16px; line-height:1.5; }
+
+.research-note-grid > .research-note:only-child { grid-column: 1 / -1; }

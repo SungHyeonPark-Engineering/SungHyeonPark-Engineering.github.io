@@ -8,12 +8,13 @@ English home: `index.html`; Korean home: `ko.html`.
 The home page has six sections: introduction, selected research, capabilities,
 outputs, background, and contact. Pavement research appears in this order:
 
-1. Low-temperature binder performance
-2. Porous pavement field performance
-3. Epoxy asphalt mixture performance
-4. Mastic asphalt and Overlay testing
-5. Anti-icing mixture standardization
-6. Binder production and stiffness (published in 2026, after graduation)
+1. Godeok Topyeong Bridge pavement evaluation (2023)
+2. Porous asphalt field performance (2023–2024)
+3. Low-temperature performance of high-viscosity binders (2023–2024)
+4. Epoxy asphalt mixture design and performance (2024, through December)
+5. Anti-icing asphalt standard proposal (2024)
+
+The 2026 binder production and stiffness technical note remains under publications.
 
 The four leading topics link to detailed project pages. Complementary ground-anchor
 experience has a separate page linked from the conference outputs. Each detail page
@@ -142,6 +143,7 @@ Public checks on 2026-10-16 confirmed the total endpoint returned HTTP 200 and
 return a cached 404 before any visits for that date have been aggregated; this
 is not by itself evidence that tracking is broken. Use the private dashboard
 for near-term ingestion checks; public counters may lag by four hours.
+
 
 
 
