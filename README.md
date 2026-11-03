@@ -11,7 +11,7 @@ outputs, background, and contact. Pavement research appears in this order:
 1. Godeok Topyeong Bridge pavement evaluation (2023)
 2. Porous asphalt field performance (2023–2024)
 3. Low-temperature performance of high-viscosity binders (2023–2024)
-4. Epoxy asphalt mixture design and performance (2024, through December)
+4. Epoxy asphalt mixture design and performance (2024)
 5. Anti-icing asphalt standard proposal (2024)
 
 The 2026 binder production and stiffness publication is explicitly labeled Technical Note.
