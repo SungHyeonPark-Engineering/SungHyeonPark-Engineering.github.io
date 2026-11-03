@@ -816,7 +816,9 @@ body.photo-open { overflow: hidden; }
 .output-paper { padding: 22px 0; border-top: 1px solid var(--border); }
 .output-label { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; color: var(--muted); font-size: .78rem; margin: 0 0 9px; }
 .role-badge { background: #e6f1ec; color: #225b4d; padding: 3px 8px; border-radius: 4px; }
-.output-paper h3 { font-size: 1.06rem; line-height: 1.45; margin: 0 0 8px; }
+.output-paper h3,
+.manuscripts-in-preparation .output-paper h4 { font-size: 1.06rem; line-height: 1.45; margin: 0 0 8px; }
+.manuscripts-in-preparation { margin-top: 38px; }
 .output-paper h3 a { text-decoration: none; }
 .output-paper .authors { font-size: .83rem; color: var(--muted); margin: 0 0 5px; }
 .output-paper .publication-meta { font-size: .8rem; margin: 0; }

@@ -14,10 +14,14 @@ outputs, background, and contact. Pavement research appears in this order:
 4. Epoxy asphalt mixture design and performance (2024, through December)
 5. Anti-icing asphalt standard proposal (2024)
 
-The 2026 binder production and stiffness technical note remains under publications.
+The 2026 binder production and stiffness publication is explicitly labeled Technical Note.
+Two manuscripts are listed separately under In Preparation / 작성 중, using the working
+English titles in CV v25-1. The low-temperature flexural/Cantabro manuscript states
+co-authorship planned; no author order or submission status is asserted.
 
 The four leading topics link to detailed project pages. Complementary ground-anchor
-experience has a separate page linked from the conference outputs. Each detail page
+experience has a separate page; its conference records and the home-page conference
+outputs are preserved in inert HTML templates and are not displayed. Each detail page
 has an English file and a matching `-ko.html` file:
 
 - `low-temperature-binder.html`
@@ -43,7 +47,10 @@ without confirmation.
 Journal titles, author order, corresponding-author marks, and DOI links retain the
 official records. The four public KGS paper/poster PDFs retain their original page
 contents; document titles and authors are recorded in PDF metadata. Each conference
-has its own record and full-poster thumbnail. Thumbnail links open the PDF.
+has its own record and full-poster thumbnail, preserved with the original content.
+Conference cards, the planned conference entry, and academic-presentation gallery
+navigation/guide are hidden in inert HTML templates in both languages. No script
+activates these templates. Existing public PDF asset URLs are unchanged.
 
 The CV is available upon request. Keep public contact links working and never add
 private source documents, unreviewed CV files, credentials, or internal work records.
