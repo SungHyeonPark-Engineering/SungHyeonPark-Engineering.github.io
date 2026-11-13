@@ -53,8 +53,9 @@ navigation/guide are hidden in inert HTML templates in both languages. No script
 activates these templates. Existing public PDF asset URLs are unchanged.
 
 The reviewed public CV is available at `assets/sunghyeon-park-cv.pdf`, based on the
-November 13, 2026 source. The source remains unchanged. The public copy omits the
-phone number, grades/test score, and scholarship amounts. Keep public contact links
+November 13, 2026 source. At the owner’s explicit request, the public PDF is an
+exact byte-for-byte copy of the supplied original, including its GPA and contact
+information; no content is edited or redacted. The source remains unchanged. Keep public contact links
 working and never add private source documents, credentials, or internal work records.
 
 ## Research images
