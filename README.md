@@ -1,4 +1,4 @@
-# Sung Hyeon Park Academic Portfolio
+# Sunghyeon Park Academic Portfolio
 
 Bilingual research portfolio hosted at https://sunghyeonpark-engineering.github.io/.
 English home: `index.html`; Korean home: `ko.html`.
