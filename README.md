@@ -16,7 +16,7 @@ outputs, background, and contact. Pavement research appears in this order:
 
 The 2026 binder production and stiffness publication is explicitly labeled Technical Note.
 Two manuscripts are listed separately under In Preparation / 작성 중, using the working
-English titles in CV v25-1. The low-temperature flexural/Cantabro manuscript states
+English titles in the CV dated November 13, 2026. The low-temperature flexural/Cantabro manuscript states
 co-authorship planned; no author order or submission status is asserted.
 
 The four leading topics link to detailed project pages. Complementary ground-anchor
@@ -39,8 +39,8 @@ without JavaScript. `styles.css` also supports the existing `privacy.html` page.
 ## Research and publication content
 
 Descriptions distinguish direct testing from support, personal participation from
-project periods, and published/presented work from planned outputs. Standardization
-reached final review; formal adoption remains incomplete. The October 2026 KSCE
+project periods, and published/presented work from planned outputs. The public
+standardization description is limited to proposal preparation support. The October 2026 KSCE
 conference entry is explicitly planned and must not be relabeled as completed
 without confirmation.
 
@@ -52,8 +52,10 @@ Conference cards, the planned conference entry, and academic-presentation galler
 navigation/guide are hidden in inert HTML templates in both languages. No script
 activates these templates. Existing public PDF asset URLs are unchanged.
 
-The CV is available upon request. Keep public contact links working and never add
-private source documents, unreviewed CV files, credentials, or internal work records.
+The reviewed public CV is available at `assets/sunghyeon-park-cv.pdf`, based on the
+November 13, 2026 source. The source remains unchanged. The public copy omits the
+phone number, grades/test score, and scholarship amounts. Keep public contact links
+working and never add private source documents, credentials, or internal work records.
 
 ## Research images
 
@@ -154,3 +156,13 @@ for near-term ingestion checks; public counters may lag by four hours.
 
 
 
+
+## November 13, 2026 CV alignment
+
+The bilingual home and pavement project pages use the latest CV as their factual
+basis. Research interests describe cold-mix and low-carbon asphalt as future
+research directions. Epoxy testing includes moisture susceptibility (TSR); external
+resilient-modulus and wheel-tracking results are explicitly analysis experience.
+The current LinkedIn URL is https://www.linkedin.com/in/sunghyeon-park/.
+The 2026 publication remains a Technical Note, manuscripts remain in preparation,
+and conference/poster templates remain inactive. Existing photos and layout are preserved.
