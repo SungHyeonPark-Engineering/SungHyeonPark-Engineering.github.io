@@ -52,11 +52,12 @@ Conference cards, the planned conference entry, and academic-presentation galler
 navigation/guide are hidden in inert HTML templates in both languages. No script
 activates these templates. Existing public PDF asset URLs are unchanged.
 
-The reviewed public CV is available at `assets/sunghyeon-park-cv.pdf`, based on the
-November 13, 2026 source. At the owner’s explicit request, the public PDF is an
-exact byte-for-byte copy of the supplied original, including its GPA and contact
-information; no content is edited or redacted. The source remains unchanged. Keep public contact links
-working and never add private source documents, credentials, or internal work records.
+As of November 16, 2026, the CV is available upon request by email only.
+The public CV download link and `assets/sunghyeon-park-cv.pdf` were removed at the
+owner’s explicit request. Do not re-upload a CV without renewed authorization.
+The private source CV remains unchanged; repository history was not rewritten.
+Keep public contact links working and never add private source documents,
+credentials, or internal work records.
 
 ## Research images
 
